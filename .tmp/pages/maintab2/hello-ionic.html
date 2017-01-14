@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title (click)="refresh(this)">Cosplay List (Lastest)
+        <ion-icon name="refresh-circle"></ion-icon>
+    </ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<!--
+  <ion-list>
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-select [(ngModel)]="type" (ionChange)="updatelist(this)" multiple="true">
+        <ion-option value="" ng-selected="true">ALL</ion-option>
+        <ion-option value="{{cosplaytype.type_id}}" *ngFor="let cosplaytype of cosplaytypes" >{{cosplaytype.type}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+-->
+  <ion-card  *ngFor="let cosplay of cosplays" padding >
+    <ion-card-header >
+
+      <!--({{cosplay.type}}){{cosplay.title}}-->
+   </ion-card-header>
+   <img src="{{cosplay.thumbnail_src}}" alt="" (click)="imageclick($event, cosplay)" >
+    <!-- <ion-card-content class="item item-text-wrap ion-card-content" [innerHTML]="">
+     </ion-card-content>
+   -->
+
+     <ion-row no-padding>
+       <ion-col>
+         <button ion-button clear small color="{{cosplay.favoritecss}}" icon-left (click)="addfavorite($event, cosplay)">
+           <ion-icon name='star'></ion-icon>
+           Favorite {{cosplay.favoritecount}}
+         </button>
+       </ion-col>
+       <ion-col text-center>
+         <button ion-button clear small color="default" icon-left (click)="addlike($event, cosplay)" >
+           <ion-icon name='ios-thumbs-up'></ion-icon>
+           Like {{cosplay.likecount}}
+         </button>
+       </ion-col>
+       <ion-col text-right>
+         <button ion-button clear small color="default" icon-left (click)="shareFb($event, cosplay)">
+           <ion-icon name='share-alt'></ion-icon>
+           Download
+         </button>
+       </ion-col>
+     </ion-row>
+   </ion-card>
+
+
+   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+     <ion-infinite-scroll-content></ion-infinite-scroll-content>
+   </ion-infinite-scroll>
+
+</ion-content>

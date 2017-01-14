@@ -1,0 +1,22 @@
+hello-ionic-page {
+
+  p {
+    margin: 20px 0;
+    line-height: 22px;
+    font-size: 16px;
+    white-space: pre-wrap;
+  }
+
+  .ion-card-content{
+    margin: 20px 0;
+    line-height: 22px;
+    font-size: 16px;
+    white-space: pre;
+  }
+
+
+  ion-row,
+  ion-col {
+    padding: 0;
+  }
+}

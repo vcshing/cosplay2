@@ -1,0 +1,71 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "XWALK_VERSION": "22+",
+            "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
+            "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
+            "XWALK_MODE": "embedded",
+            "XWALK_MULTIPLEAPK": "true",
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "cordova-plugin-nativestorage": {
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "745795722235155",
+            "APP_NAME": "Motto",
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "com.verso.cordova.clipboard": {
+            "PACKAGE_NAME": "com.joke.joke"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.cosplay.cosplay"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.cosplay.cosplay"
+        },
+        "com-sarriaroman-photoviewer": {
+            "PACKAGE_NAME": "com.cosplay.cosplay"
+        },
+        "org.devgeeks.Canvas2ImagePlugin": {
+            "PACKAGE_NAME": "com.cosplay.cosplay"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.motto.motto"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.cosplay.cosplay"
+        }
+    }
+}
