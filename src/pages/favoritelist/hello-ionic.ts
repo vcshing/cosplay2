@@ -90,7 +90,7 @@ export class HelloFavoritePage {
             infiniteScroll.complete();
           })
 
-          if(Math.floor(Math.random() * 10) + 1 == 1 ){
+          if(Math.floor(Math.random() * 15) + 1 == 1 ){
             self.globalFunction.requestInterstitialAd();
           }
 
@@ -155,7 +155,7 @@ export class HelloFavoritePage {
         alert("Fail to Save");
       };
 
-      if(Math.floor(Math.random() * 5) + 1 == 1 ){
+      if(Math.floor(Math.random() * 3) + 1 == 1 ){
         this.globalFunction.requestInterstitialAd();
       }
 
