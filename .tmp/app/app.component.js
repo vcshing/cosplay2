@@ -19,7 +19,8 @@ export var MyApp = (function () {
         var self = this;
         this.initializeApp();
         this.pages = [
-            { title: 'cosplay List', component: HelloIonicPage }
+            { title: 'cosplay List', component: HelloIonicPage },
+            { title: 'Other Apps', component: null }
         ];
         if ((/(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent)) && this.enablefb == true) {
             Facebook.getLoginStatus().then(function (response) {
@@ -44,10 +45,10 @@ export var MyApp = (function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             StatusBar.styleDefault();
-            Splashscreen.hide();
+            _this.hideSplashScreen();
             if ((/(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent))) {
-                _this.globalFunction.createBanner();
-                _this.globalFunction.prepareInterstitial();
+                _this.globalFunction.initAds();
+                _this.globalFunction.createBannerView();
             }
         });
     };
@@ -83,8 +84,21 @@ export var MyApp = (function () {
                 ];
             }
         }
+        else if (page.title == "Other Apps") {
+            var target = "_system";
+            var options = "location=yes";
+            var url = "https://play.google.com/store/apps/details?id=com.cosplay.cosplay";
+            window.open(url, target, options);
+        }
         else {
             this.nav.setRoot(page.component);
+        }
+    };
+    MyApp.prototype.hideSplashScreen = function () {
+        if (Splashscreen) {
+            setTimeout(function () {
+                Splashscreen.hide();
+            }, 100);
         }
     };
     MyApp.decorators = [

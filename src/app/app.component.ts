@@ -35,7 +35,8 @@ export class MyApp {
     this.initializeApp();
 
     this.pages = [
-      { title: 'cosplay List', component: HelloIonicPage }
+      { title: 'cosplay List', component: HelloIonicPage },
+      { title: 'Other Apps', component: null }
     ];
 
     if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) ) && this.enablefb==true) {
@@ -62,11 +63,11 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
-      Splashscreen.hide();
+      this.hideSplashScreen();
 
       if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
-            this.globalFunction.createBanner();
-            this.globalFunction.prepareInterstitial();
+            this.globalFunction.initAds();
+            setTimeout(this.globalFunction.createBannerView(), 1);
       }
     });
   }
@@ -104,10 +105,21 @@ export class MyApp {
           { title: 'Login', component: LoginPage }
         ];
       }
+    }else if(page.title=="Other Apps"){
+      var target = "_system";
+      var options = "location=yes";
+      var url = "https://play.google.com/store/apps/developer?id=Sky+Explorer";
+      window.open(url, target, options);
     }else{
       this.nav.setRoot(page.component);
     }
   }
 
-
+  hideSplashScreen() {
+      if (Splashscreen) {
+          setTimeout(() => {
+              Splashscreen.hide();
+          }, 100);
+      }
+  }
 }

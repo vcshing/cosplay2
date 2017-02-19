@@ -31,9 +31,6 @@
         "cordova-plugin-x-socialsharing": {
             "PACKAGE_NAME": "com.ionicframework.githubionic331774"
         },
-        "cordova-plugin-admobpro": {
-            "PACKAGE_NAME": "com.ionicframework.githubionic331774"
-        },
         "cordova-plugin-facebook4": {
             "APP_ID": "745795722235155",
             "APP_NAME": "Motto",
@@ -53,13 +50,16 @@
         },
         "org.devgeeks.Canvas2ImagePlugin": {
             "PACKAGE_NAME": "com.cosplay.cosplay"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "com.cosplay.cosplay"
         }
     },
     "dependent_plugins": {
-        "cordova-plugin-extension": {
-            "PACKAGE_NAME": "com.ionicframework.githubionic331774"
-        },
         "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.cosplay.cosplay"
+        },
+        "cordova-connectivity-monitor": {
             "PACKAGE_NAME": "com.cosplay.cosplay"
         }
     }

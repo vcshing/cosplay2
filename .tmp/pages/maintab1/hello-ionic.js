@@ -53,8 +53,8 @@ export var MainTab1 = (function () {
             }
             infiniteScroll.complete();
         });
-        if (Math.floor(Math.random() * 11) + 1 == 1) {
-            self.globalFunction.showInterstitial();
+        if (Math.floor(Math.random() * 10) + 1 == 1) {
+            self.globalFunction.requestInterstitialAd();
         }
     };
     MainTab1.prototype.updatelist = function (returnData) {
@@ -98,6 +98,9 @@ export var MainTab1 = (function () {
         var error = function (err) {
             alert("Fail to Save");
         };
+        if (Math.floor(Math.random() * 5) + 1 == 1) {
+            this.globalFunction.requestInterstitialAd();
+        }
         this.globalFunction.saveImageToPhone(encodeURI(msg.display_src), success, error);
         //  PhotoViewer.show('http://www.desktopwallpaperhd.net/thumbs/8/7/xiaogoukuanping-animal-tupian-85399.jpg');
         /*

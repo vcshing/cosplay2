@@ -4,8 +4,6 @@ import { NavController } from 'ionic-angular';
 
 //import 'rxjs/add/operator/map';
 
-
-
 import { cosplay } from '../../models/dataModels';
 import { cosplayType } from '../../models/dataModels';
 import {  WebMethod } from '../../providers/webMethod';
@@ -83,7 +81,7 @@ export class HelloFavoritePage {
                   data["result"][key]["favoritecss"]=  "default";
               })
             });
-            console.log(data["result"]);
+            //console.log(data["result"]);
 
             if($(data["result"]).length>0){
                   self.cosplays = this.cosplays.concat( data["result"]);
@@ -91,9 +89,11 @@ export class HelloFavoritePage {
             }
             infiniteScroll.complete();
           })
-          if(Math.floor(Math.random() * 11) + 1 == 1 ){
-            self.globalFunction.showInterstitial();
+
+          if(Math.floor(Math.random() * 10) + 1 == 1 ){
+            self.globalFunction.requestInterstitialAd();
           }
+
         }
       });
 
@@ -154,6 +154,10 @@ export class HelloFavoritePage {
       var error = function(err){
         alert("Fail to Save");
       };
+
+      if(Math.floor(Math.random() * 5) + 1 == 1 ){
+        this.globalFunction.requestInterstitialAd();
+      }
 
       this.globalFunction.saveImageToPhone(encodeURI(msg.display_src), success, error);
     }

@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-admobpro": {
-            "PACKAGE_NAME": "com.motto.motto"
-        },
         "cordova-plugin-crosswalk-webview": {
             "XWALK_VERSION": "22+",
             "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
@@ -58,13 +55,16 @@
         },
         "org.devgeeks.Canvas2ImagePlugin": {
             "PACKAGE_NAME": "com.cosplay.cosplay"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "com.cosplay.cosplay"
         }
     },
     "dependent_plugins": {
-        "cordova-plugin-extension": {
-            "PACKAGE_NAME": "com.motto.motto"
-        },
         "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.cosplay.cosplay"
+        },
+        "cordova-connectivity-monitor": {
             "PACKAGE_NAME": "com.cosplay.cosplay"
         }
     }

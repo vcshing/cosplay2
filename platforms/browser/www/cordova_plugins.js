@@ -78,14 +78,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
-        "id": "cordova-plugin-admobpro.AdMob",
-        "pluginId": "cordova-plugin-admobpro",
-        "clobbers": [
-            "window.AdMob"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-facebook4/www/facebook-browser.js",
         "id": "cordova-plugin-facebook4.FacebookConnectPluginBrowser",
         "pluginId": "cordova-plugin-facebook4",
@@ -319,6 +311,23 @@ module.exports = [
         "clobbers": [
             "window.canvas2ImagePlugin"
         ]
+    },
+    {
+        "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
+        "id": "cordova-connectivity-monitor.connectivity",
+        "pluginId": "cordova-connectivity-monitor",
+        "clobbers": [
+            "window.connectivity"
+        ]
+    },
+    {
+        "file": "plugins/cordova-admob/www/admob.js",
+        "id": "cordova-admob.AdMobAds",
+        "pluginId": "cordova-admob",
+        "clobbers": [
+            "window.admob",
+            "window.tappx"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -332,15 +341,15 @@ module.exports.metadata =
     "ionic-plugin-keyboard": "2.2.1",
     "cordova-plugin-crosswalk-webview": "2.2.0",
     "cordova-plugin-x-socialsharing": "5.1.3",
-    "cordova-plugin-extension": "1.5.1",
-    "cordova-plugin-admobpro": "2.24.0",
     "cordova-plugin-facebook4": "1.7.4",
     "com.verso.cordova.clipboard": "0.1.0",
     "cordova-plugin-compat": "1.1.0",
     "cordova-plugin-file": "4.3.1",
     "cordova-plugin-file-transfer": "1.6.1",
     "com-sarriaroman-photoviewer": "1.1.10",
-    "org.devgeeks.Canvas2ImagePlugin": "0.6.0"
+    "org.devgeeks.Canvas2ImagePlugin": "0.6.0",
+    "cordova-connectivity-monitor": "1.2.2",
+    "cordova-admob": "4.1.16"
 }
 // BOTTOM OF METADATA
 });

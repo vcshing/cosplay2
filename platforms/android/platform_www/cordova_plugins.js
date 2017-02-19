@@ -1,14 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "id": "cordova-plugin-admobpro.AdMob",
-        "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
-        "pluginId": "cordova-plugin-admobpro",
-        "clobbers": [
-            "window.AdMob"
-        ]
-    },
-    {
         "id": "cordova-plugin-device.device",
         "file": "plugins/cordova-plugin-device/www/device.js",
         "pluginId": "cordova-plugin-device",
@@ -287,13 +279,28 @@ module.exports = [
         "clobbers": [
             "window.canvas2ImagePlugin"
         ]
+    },
+    {
+        "id": "cordova-connectivity-monitor.connectivity",
+        "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
+        "pluginId": "cordova-connectivity-monitor",
+        "clobbers": [
+            "window.connectivity"
+        ]
+    },
+    {
+        "id": "cordova-admob.AdMobAds",
+        "file": "plugins/cordova-admob/www/admob.js",
+        "pluginId": "cordova-admob",
+        "clobbers": [
+            "window.admob",
+            "window.tappx"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-extension": "1.5.1",
-    "cordova-plugin-admobpro": "2.24.0",
     "cordova-plugin-crosswalk-webview": "2.2.0",
     "cordova-plugin-device": "1.1.3",
     "cordova-plugin-nativestorage": "2.0.2",
@@ -308,7 +315,9 @@ module.exports.metadata =
     "cordova-plugin-file": "4.3.1",
     "cordova-plugin-file-transfer": "1.6.1",
     "com-sarriaroman-photoviewer": "1.1.10",
-    "org.devgeeks.Canvas2ImagePlugin": "0.6.0"
+    "org.devgeeks.Canvas2ImagePlugin": "0.6.0",
+    "cordova-connectivity-monitor": "1.2.2",
+    "cordova-admob": "4.1.16"
 };
 // BOTTOM OF METADATA
 });
